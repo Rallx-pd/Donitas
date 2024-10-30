@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0 100px;
+  background-color: #f0d5e8;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.nav .logo h1 {
+  font-weight: 6  00;
+  font-family: "Kaushan Script", sans-serif;
+  color: #f159c4;
+}
+
+.nav .logo b{
+  color: #ce86f0;
+  font-family: "Kaushan Script", sans-serif;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none; 
+}
+
+.nav ul li{
+  margin-right: 30px;
+}
+
+.nav ul li a{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+}
+
+/* Active */
+
+.nav ul .active::after {
+  content: '';
+  width: 50%;
+  height: 3px;
+  background-color: #f159c4;
+  display: flex;
+  position: relative;
+  margin-left: 10px;
+}
+
+/* Input */
+
+input {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.signin {
+  background: transparent;
+  border: none;
+}
+
+.signup {
+  background-color: #f159c4;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+/* content */
+
+.content {
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 30px;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* conttent text */
+
+.content .content-left {
+  display: block;
+  width: 100%;
+}
+
+.content .content-left .info {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .content-left .info h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.content .content-left .info p{
+  font-size: 23px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+/* button */
+
+.content .content-left button {
+  padding: 10px 23px;
+  background-color: #f159c4;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* content right */
+
+.content .content-right {
+  display: block;
+  width: 100%;
+}
+
+.content .content-right img {
+  width: 200px;
+  height: auto;
+  position: relative;
+  animation: rotate 10s linear infinite;
+}
+
+.d1{
+  position: relative;
+  top: 2rem;
+  left: 4rem;
+}
+
+.d2 {
+  position: relative;
+  bottom: 5rem;
+  left: 6rem;
+}
+
+.d3 {
+  position: relative;
+  top: 12rem;
+  right: 10rem;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
