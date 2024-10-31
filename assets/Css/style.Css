@@ -184,17 +184,24 @@ input {
   margin-top: 50px;
 }
 
-
 .category .list-items h3 {
   margin-top: 160px;
-  font-size: 20px;
+  font-size: 50px;
   font-weight: 600;
   margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Kaushan Script", sans-serif;
+  color: #f159c4;
+  box-shadow: 0 0 30px #ce86f0;
+  border-radius: 30px;
 }
 
 .category .list-items .card-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 6rem;
 }
 
 .category .card-list .card {
@@ -205,7 +212,7 @@ input {
   border-radius: 10px;
   position: relative;
   background: #ffffffa9;
-  outline: 2px solid #fd91cd;
+  outline: 2px solid #fd91cd; 
 }
 
 .category .card-list .card img {
@@ -219,6 +226,11 @@ input {
   position: absolute;
   box-shadow: 0 10px 10px #fd91cce8;
   border-radius: 50%;
+  transition: 0.3s;
+}
+
+.category .card-list .card img:hover{
+  transform: scale(1.2);
 }
 
 .category .card-list .card .food-title {
@@ -253,6 +265,29 @@ input {
   color: #f159c4;
   font-size: 20px;
   cursor: pointer;
+}
+
+.category .card:nth-child(n+9) {
+  display: none;
+}
+
+#readButton {
+  border: none;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 32px;
+  background-color: transparent;
+  color: #f159c4;
+  cursor: pointer;
+  transition: 0.4s;
+  position: relative;
+  left: 34.5rem;
+}
+
+#readButton:hover {
+  color: #ffffffd3; 
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.4);
 }
 
 /* scroll-bar */
