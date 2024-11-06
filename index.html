@@ -7,36 +7,34 @@
 
   <link rel="stylesheet" href="assets/Css/style.Css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+  <link rel="stylesheet" href="formulario.html">
 
   <title>Donna Donitas</title>
 
 </head>
 <body>
 
-  <section class="menu">
+  <!-- home -->
     <div class="nav">
       <div class="logo">
         <h1>Do<b>nn</b>a Do<b>nit</b>as</h1>
       </div>
 
         <ul>
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Galeria</a></li>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a class="active" href="#menu">Menu</a></li>
+          <li><a class="active" href="#serv">Serviços</a></li>
+          <li><a class="active" href="#">Sobre</a></li>
         </ul>
 
-        <div>
+        <div class="btn">
           <input class="signin" type="submit" value="Entrar" name="singin">
-          <input class="signup" type="submit" value="Cadastrar" name="singup">
+          <input class="signup" type="button" value="Cadastrar" name="singup" onclick="window.location.href='formulario.html';">
         </div>     
 
     </div>
-  </section>
 
-  <section class="grid">
+  <section class="grid" id="home">
 
     <div class="content">
       <div class="content-left">
@@ -66,7 +64,7 @@
   </section>
 
   <!-- Menu -->
-  <section class="category">
+  <section class="category" id="menu">
 
     <div class="list-items">
       <h3>Doces Populares</h3>
@@ -274,15 +272,77 @@
         </div>
 
       </div>
-    
+
       <button id="readButton"><i class="bi bi-arrow-down-circle-fill"></i></button>
 
-    </div>  
+    </div>    
 
   </section>
 
   <!-- serviços -->
   
+  <section class="delivery" id="serv">
+
+      <div class="container">
+        <div class="info">
+        <h2>Encomende Agora</h2>
+        </div>
+
+        <ul>
+          <a href="#">
+            <li style="--cor1: #25d366; --cor2: #e5ff00;">
+            <span class="icon"><i class="bi bi-whatsapp"></i></span>
+            <span class="text">Zap</span>
+          </li>
+          </a>
+        
+          <a href="#">
+            <li style="--cor1: #Fb3997; --cor2: #fecf12;">
+            <span class="icon"><i class="bi bi-instagram"></i></span>
+            <span class="text">Instagram</span>
+          </li>
+          </a>
+          
+          <a href="#">
+            <li style="--cor1:#ff1a34; --cor2: #fff;">
+            <span class="icon"><i class="bi bi-basket2"></i></span>
+            <span class="text">Ifood</span>
+          </li>
+          </a>
+
+          <a href="#">
+            <li style="--cor1: #8b85ff; --cor2: #25d366;">
+            <span class="icon"><i class="bi bi-geo-alt"></i></span>
+            <span class="text">Maps</span>
+          </li>
+          </a>
+                                    
+        </ul>  
+
+        <div class="right">
+          <img src="assets/image/catalogo/Eating.svg" alt="">
+        </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+  
+    <p class="loading">Loading <span></span></p>
+
+    <ul class="menu">
+      <li>
+        <li><a class="active" href="#home">Home</a></li>
+          <li><a class="active" href="#menu">Menu</a></li>
+          <li><a class="active" href="#serv">Serviços</a></li>
+          <li><a class="active" href="#">Sobre</a></li>
+      </li>
+    </ul>
+
+    <p>Feito <i class="bi bi-heart-fill"></i> por @Rallx</p>
+  </footer>
+
   <script src="assets/Js/script.js"></script>
 
 </body>

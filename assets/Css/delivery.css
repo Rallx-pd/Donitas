@@ -1,0 +1,116 @@
+.delivery {
+  display: flex;
+}
+
+.delivery .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.212);
+  border-radius: 2.5rem;
+  background-color: #ce86f0;
+}
+
+.delivery .container .info h2 {
+  font-size: 70px;
+  margin-bottom: 30px;
+  position: relative;
+  font-weight: bold;
+  bottom: 170px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Kaushan Script", sans-serif;
+  color: #fff;
+}
+
+.delivery .container .right {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+
+}
+
+.delivery .container .right img {
+  width: 500px;
+  height: auto;
+  user-select: none;
+  transform: scaleX(-1); /* Reflete a imagem horizontalmente */
+}
+
+
+.delivery .container ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 25px;
+}
+
+.delivery .container ul li {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 8px 25px #00000059;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Adicionado para ocultar conteúdo ao expandir */
+  transition: width 0.3s;
+  top: 80px;
+}
+
+.delivery .container ul li span {
+  position: absolute;
+}
+
+.delivery .container ul li:hover {
+  width: 200px;
+}
+
+.delivery .container ul li .icon {
+  color: #ccc;
+  font-size: 2em;
+  transition: transform 0.3s;
+  transition-delay: 0.2s;
+}
+
+.delivery .container ul li .text {
+  color: #fff;
+  font-size: 20px;
+  transform: scale(0);
+  transition: transform 0.3s;
+  transition-delay: 0.1s;
+  white-space: nowrap; /* Impede quebra de linha no texto */
+  margin-left: 10px; /* Espaçamento para separar texto do ícone */
+}
+
+.delivery .container ul li:hover .text {
+  transform: scale(1);
+}
+
+.delivery .container ul li:hover .icon {
+  transform: scale(0);
+}
+
+.delivery .container ul li::before {
+  content: '';
+  position: absolute;
+  background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+  inset: 0;
+  opacity: 0;
+}
+
+.delivery .container ul li:hover::before {
+  opacity: 1;
+}
+
+.delivery .container ul a {
+  width: 20px;
+}

@@ -1,0 +1,191 @@
+/* cards */
+
+.category {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 1100px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.category .list-items{
+  width: 90%;
+  transition: all 0.3s ease-in-out; 
+}
+
+.category .list-items h3 {
+  margin-top: 85px;
+  font-size: 50px;
+  font-weight: 600;
+  position: relative;
+  bottom: 110px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Kaushan Script", sans-serif;
+  color: #f159c4;
+  box-shadow: 0 0 30px #ce86f0;
+  border-radius: 30px;
+}
+
+.category .list-items .card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 6rem;
+  transition: all 0.3s ease-in-out; /* Transição suave */;
+}
+
+.category .card-list .card {
+  width: 12.5rem;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  background: #ffffffa9;
+  outline: 2px solid #fd91cd; 
+  transition: transform 0.3s ease;
+}
+
+.category .card-list .card img {
+  width: 100px;
+  height: auto;
+  bottom: 10.5rem;
+  left: 50px;
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  box-shadow: 0 10px 10px #fd91cce8;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.category .card-list .card img:hover{
+  transform: scale(1.2);
+}
+
+.category .card-list .card .food-title {
+  padding: 40px 0 5px;
+}
+
+.category .card-list .card .food-title h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Kaushan Script", sans-serif;
+}
+
+.category .card-list .card .desc-food p{
+  font-size: 15px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.category .card .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category .card .price span {
+  font-weight: 600;
+}
+
+.category .card .price span .plus-icon {
+  color: #f159c4;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.category .card:nth-child(n+9) {
+  display: none;
+  transition: all 0.3s ease-in-out; /* Transição suave */
+}
+
+#readButton {
+  border: none;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 32px;
+  background-color: transparent;
+  color: #f159c4;
+  cursor: pointer;
+  transition: 0.4s;
+  position: relative;
+  left: 33.5rem;
+}
+
+#readButton:hover {
+  color: #ffffffd3; 
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.4);
+}
+
+/* CSS para mostrar mais cartões sem quebrar o layout */
+.show-more .card:nth-child(n+9) {
+  display: block; /* Mostra os itens adicionais */
+  transition: all 0.3s ease-in-out; /* Transição suave */
+}
+
+
+
+/* Responsividade para resolução de 1280px ou menor */
+@media (max-width: 1280px) {
+  .category {
+    min-height: 1300px;
+  }
+
+  .category .list-items h3 {
+    font-size: 40px;
+    margin-top: 70px;
+  }
+
+  .category .list-items .card-list {
+    grid-gap: 4rem;
+  }
+
+  .category .card-list .card {
+    padding: 18px;
+  }
+
+  .category .card-list .card .food-title h1 {
+    font-size: 18px;
+  }
+
+  #readButton {
+    font-size: 28px;
+    left: 28rem;
+  }
+}
+
+/* Responsividade para resolução de 768px ou menor */
+@media (max-width: 768px) {
+  .category {
+    min-height: auto;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .category .list-items h3 {
+    font-size: 35px;
+    margin-top: 50px;
+  }
+
+  .category .list-items .card-list {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .category .card-list .card {
+    width: 100%;
+  }
+
+  #readButton {
+    font-size: 24px;
+    left: auto;
+    margin: 0 auto;
+  }
+}

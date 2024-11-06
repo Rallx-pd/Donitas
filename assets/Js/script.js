@@ -10,3 +10,4 @@ readButton.addEventListener("click", () => {
   
   readButton.style.display = "none"; // Esconde o botão após o clique
 });
+

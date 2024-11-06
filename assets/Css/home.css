@@ -1,0 +1,256 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.nav .logo h1 {
+  font-weight: 600;
+  font-family: "Kaushan Script", sans-serif;
+  color: #f159c4;
+}
+
+.nav .logo b{
+  color: #ce86f0;
+  font-family: "Kaushan Script", sans-serif;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none; 
+}
+
+.nav ul li{
+  margin-right: 30px;
+}
+
+.nav ul li a{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Active */
+
+.nav ul .active::after {
+  content: '';
+  width: 0%;
+  height: 4px;
+  background-color: #f159c4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.nav ul .active:hover::after {
+  width: 100%;
+}
+
+/* Input */
+
+input {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.signin {
+  background: transparent;
+  border: none;
+}
+
+.signup {
+  background-color: #f159c4;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.signup:hover {
+  background-color: #ffffff;
+  color: #f159c4; 
+  transition: 0.5s ease-in-out;
+  transform: scale(1.1);
+}
+
+/* content */
+
+.content {
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 30px;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* conttent text */
+
+.content .content-left {
+  display: block;
+  width: 100%;
+}
+
+.content .content-left .info {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .content-left .info h2 {
+  font-size: 50px;
+  margin-bottom: 1rem;
+  position: relative;
+  bottom: 100px;
+}
+
+.content .content-left .info p{
+  font-size: 25px;
+  line-height: 42px;
+  margin-bottom: 20px;
+  position: relative;
+  bottom: 5rem;
+}
+
+/* button */
+
+.content .content-left button {
+  padding: 10px 23px;
+  background-color: #f159c4;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 23px;
+  transition: 0.4s;
+}
+
+.content .content-left button:hover {
+  background-color: #ffffff;
+  color: #f159c4; 
+  transition: 0.5s ease-in-out;
+  transform: scale(1.1);
+}
+
+/* content right */
+
+.content .content-right {
+  display: flex; /* Utilizando Flexbox */
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre as imagens */
+  padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.content .content-right img {
+  width: 185px;
+  height: auto;
+  user-select: none;
+  animation: rotate 10s linear infinite;
+}
+
+
+.d1 {
+  transform: translateX(-30px) translateY(-20px) scale(1.1); /* Leve sobreposição e aumento */
+  z-index: 2; /* Eleva para ficar à frente */
+  position: relative;
+  left: 2rem;
+}
+
+.d2 {
+  transform: translateX(0px) translateY(10px) scale(1); /* Posição centralizada com leve deslocamento */
+  z-index: 1; /* Coloca atrás da primeira imagem */
+  position: relative;
+  bottom: 10em;
+}
+
+.d3 {
+  transform: translateX(30px) translateY(-20px) scale(1.1); /* Leve sobreposição e aumento */
+  z-index: 2; /* Eleva para ficar à frente */
+  position: relative;
+  right: 2rem;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Media query para resolução de 1020px */
+@media (max-width: 1280px) {
+
+  .nav ul {
+    display: none;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .content .content-left .info h2 {
+    font-size: 36px;
+  }
+
+  .content .content-left .info p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .content .content-right img {
+    width: 150px;
+  }
+
+  .d1, .d2, .d3 {
+    position: static;
+    transform: none;
+  }
+}
+
+
+/* Responsividade para 630px */
+@media (max-width: 630px) {
+
+  .nav .logo {
+    font-size: 14px;
+  }
+
+  .nav ul, input {
+    display: none;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .content .content-left .info h2 {
+    font-size: 22px;
+  }
+
+  .content .content-left .info p {
+    font-size: 18px;
+    line-height: 28px;
+    bottom: 0;
+  }
+
+  .content .content-right {
+    flex-direction: column;
+  }
+
+  .content .content-right img {
+    width: 150px;
+  }
+}
